@@ -7,6 +7,21 @@ struct testo
     int16_t tamos;
 };
 
+struct this_should_not_be_serialized
+{
+    int16_t gg;
+    char c;
+};
+
+//! serialize
+struct but_this_one_should
+{
+    int32_t number;
+    float fpoint;
+    char name[12];
+    double f64;
+};
+
 /*
 int testo_serialize(buffer_t buffer, const struct testo *testo)
 {
